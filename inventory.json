@@ -1,0 +1,23 @@
+{
+  "1": {
+    "name": "Bata Shoes",
+    "category": "Shoes",
+    "quantity": 30,
+    "price": 30.0,
+    "date_added": "2025-12-19 00:55:40"
+  },
+  "2": {
+    "name": "Polo Shirt",
+    "category": "Clothes",
+    "quantity": 10,
+    "price": 15.0,
+    "date_added": "2025-12-19 00:56:09"
+  },
+  "4": {
+    "name": "Bags",
+    "category": "bag",
+    "quantity": 1,
+    "price": 14.0,
+    "date_added": "2025-12-19 01:04:21"
+  }
+}
