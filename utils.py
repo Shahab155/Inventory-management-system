@@ -1,10 +1,24 @@
 import json
 import os
 from datetime import datetime
+import hashlib
 
 
 # Default inventory file name
 INVENTORY_FILE = 'inventory.json'
+
+
+def hash_password(password):
+    """Hash a password using SHA-256 with salt"""
+    # Create a salt using the current time and password
+    salt = "inventory_salt_2025"  # Fixed salt - in production use random salt
+    salted_password = password + salt
+    return hashlib.sha256(salted_password.encode()).hexdigest()
+
+
+def verify_password(password, hashed_password):
+    """Verify a password against its hash"""
+    return hash_password(password) == hashed_password
 
 
 def load_inventory():
