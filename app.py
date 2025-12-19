@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-from dotenv import load_dotenv
-import os
 from utils import (
     add_product, update_product_quantity, delete_product, get_all_products,
     increase_stock, decrease_stock, search_products_by_name,
