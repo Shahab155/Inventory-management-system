@@ -1,11 +1,16 @@
 import streamlit as st
 import pandas as pd
+from dotenv import load_dotenv
+import os
 from utils import (
     add_product, update_product_quantity, delete_product, get_all_products,
     increase_stock, decrease_stock, search_products_by_name,
     filter_products_by_category, get_low_stock_items, get_total_inventory_value,
     hash_password, verify_password
 )
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Set page configuration
 st.set_page_config(
@@ -23,8 +28,8 @@ if 'form_submitted' not in st.session_state:
     st.session_state.form_submitted = False
 
 # Define admin credentials (hashed)
-ADMIN_USERNAME = "adminshahab"
-ADMIN_PASSWORD_HASHED = hash_password("Bhutto333@")  # Change this to your preferred password
+ADMIN_USERNAME = os.getenv("ADMIN")  # Change this to your preferred username
+ADMIN_PASSWORD_HASHED = hash_password("PASSWORD")  # Change this to your preferred password
 
 
 def login_page():
