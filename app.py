@@ -10,7 +10,7 @@ from utils import (
 )
 
 # Load environment variables from .env file
-load_dotenv()
+
 
 # Set page configuration
 st.set_page_config(
@@ -28,8 +28,8 @@ if 'form_submitted' not in st.session_state:
     st.session_state.form_submitted = False
 
 # Define admin credentials (hashed)
-ADMIN_USERNAME = os.getenv("ADMIN")  # Change this to your preferred username
-ADMIN_PASSWORD_HASHED = hash_password("PASSWORD")  # Change this to your preferred password
+ADMIN_USERNAME = os.getenv("admin")  # Change this to your preferred username
+ADMIN_PASSWORD_HASHED = hash_password("Bhutto333@")  # Change this to your preferred password
 
 
 def login_page():
