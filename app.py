@@ -26,7 +26,7 @@ if 'form_submitted' not in st.session_state:
     st.session_state.form_submitted = False
 
 # Define admin credentials (hashed)
-ADMIN_USERNAME = os.getenv("admin")  # Change this to your preferred username
+ADMIN_USERNAME = ("admin")  # Change this to your preferred username
 ADMIN_PASSWORD_HASHED = hash_password("Bhutto333@")  # Change this to your preferred password
 
 
